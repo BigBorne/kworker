@@ -8,8 +8,6 @@
 
 ### Linux VPS — пошаговая инструкция
 
-> Недорогой и стабильный VPS от 119 рублей в месяц — [play2go.cloud](https://play2go.cloud/?ref_id=TAiMBIAReXI)
-
 **1. Создай бота и получи токен**
 
 Напиши [@BotFather](https://t.me/BotFather) → `/newbot` → скопируй токен вида `1234567890:ABC...`
@@ -25,7 +23,9 @@ ssh root@<IP сервера>
 **3. Установка одной командой**
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/koshelevnv/kwork-bot/main/manage.sh)
+curl -fsSL https://raw.githubusercontent.com/BigBorne/kworker/main/manage.sh -o manage.sh
+  chmod +x manage.sh
+  ./manage.sh instal
 ```
 
 Скрипт спросит только токен бота, затем автоматически:
@@ -45,7 +45,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/koshelevnv/kwork-bot/main/ma
 sudo apt update && sudo apt install -y python3.11 python3.11-venv git screen
 
 # 2. Клонируем проект
-git clone https://github.com/koshelevnv/kwork-bot.git ~/kwork-bot
+git clone https://github.com/BigBorne/kworker.git ~/kwork-bot
 cd ~/kwork-bot
 
 # 3. Виртуальное окружение и зависимости
